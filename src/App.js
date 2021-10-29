@@ -11,6 +11,8 @@ import Login from './Pages/Login/Login';
 import ContextProvider from './Context/ContextProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import VanueRentals from './Pages/Home/VENUE RENTALS/VanueRentals';
+import Footer from './Pages/Home/Shared/Footer/Footer';
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
         <Route path="/venuerentals">
          <VanueRentals></VanueRentals>
         </Route>
+        <Route path="/about">
+        <AboutUs></AboutUs>
+        </Route>
         <Route path="/login">
          <Login></Login>
         </Route>
@@ -43,6 +48,7 @@ function App() {
         </Route>
 
       </Switch>
+      <Footer></Footer>
       </BrowserRouter>
       </ContextProvider>
     </div>

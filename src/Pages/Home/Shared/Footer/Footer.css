@@ -1,0 +1,22 @@
+.footer-body{
+    background-color: rgba(0, 0, 0, 0.87);
+    text-align: justify;
+    color: white;
+    width:100%;
+    height:auto;
+    margin-top:auto;
+   
+}
+.footer-ul li{
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    color: white;
+    border-bottom: 0px;
+}
+
+.footer-ul li:hover{
+    background: rgb(255, 255, 255);
+color: rgb(17, 0, 248);
+border-bottom: 2px solid rgb(56, 146, 79);
+}
