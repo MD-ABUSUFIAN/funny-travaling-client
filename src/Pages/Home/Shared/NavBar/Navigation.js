@@ -23,25 +23,19 @@ const Navigation = () => {
            <img className="w-25 img-fluid rounded-circle" src={user.photoURL} alt=""/>
            <button onClick={logOut}>Logout</button>
            </Nav.Link>
-           <Nav.Link className=" nav-text" as={Link}  to ="/myordeer">My-Order</Nav.Link></div>:<Nav.Link className=" nav-text" as={Link} to ="/login">Login</Nav.Link>
+           <Nav.Link className=" nav-text" as={Link} to ="/myordeer">My-Order</Nav.Link>
+           <Nav.Link className=" nav-text" as={Link} to ="/manageOrder">Manage All Order</Nav.Link>
+           <Nav.Link className=" nav-text" as={Link} to ="/addnewservice">Add a New Service</Nav.Link>
+           
+           
+           
+           </div>:<Nav.Link className=" nav-text" as={Link} to ="/login">Login</Nav.Link>
            }
             
 
-                
-            
-            
            
         </Nav>
-        {/* <Nav className="ms-auto">
-
-            {
-                user?.email ?<Nav.Link className=" text-white px-3 logout-btn fw-bold "><Button onClick={logOut}>Logout</Button> <h3>{user.displayName}</h3></Nav.Link>:
-
-                <Nav.Link className="btn btn-primary text-white me-2 px-3 login-btn fw-bold" as={Link} to ="/login">Login</Nav.Link>
-            }
-                    
-
-            </Nav> */}
+        
         
     </Container>
   </Navbar>
