@@ -14,6 +14,7 @@ const Navigation = () => {
             <Nav className="ms-auto fs-5 " >
             <Nav.Link className=" nav-text" as={Link} to="/home">Home</Nav.Link>
             <Nav.Link className=" nav-text" as={Link} to ="/travelOffer">Travel Offer</Nav.Link>
+            <Nav.Link className=" nav-text" as={Link} to ="/venuerentals">VENUE RENTALS</Nav.Link>
             <Nav.Link className=" nav-text" as={Link} to ="/about">About Us</Nav.Link>
            
 

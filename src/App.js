@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import ContextProvider from './Context/ContextProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import VanueRentals from './Pages/Home/VENUE RENTALS/VanueRentals';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         <PrivateRoute path="/offerInfo/:infoId">
           <OfferInfo></OfferInfo>
         </PrivateRoute>
+        <Route path="/venuerentals">
+         <VanueRentals></VanueRentals>
+        </Route>
         <Route path="/login">
          <Login></Login>
         </Route>
