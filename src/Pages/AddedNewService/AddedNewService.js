@@ -1,37 +1,40 @@
 import React from 'react';
-// const axios = require('axios');
 import { useForm } from "react-hook-form";
+const axios = require('axios');
 
 const AddedNewService = () => {
 
-    const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+    const { register, handleSubmit,reset } = useForm();
+  const onSubmit = data =>{
+
+            axios.post('http://localhost:5000/addnew',data)
+            .then(res=>{
+            console.log(res);
+        })
+        
+    reset();
+  }
    
-    
-        // fetch('http://localhost:5000/services',{
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json'},
-        //     body: JSON.stringify()
-
-        // })
-
-
     return (
         <div>
-            <div >
-                <h1 className="bg-warning my-5 py-4 px-2 rounded-pill text-black fs-1 gw-bolder w-50 mx-auto">Added A New Service Form</h1>
+            <div  className="mx-auto">
+                <h1 className="bg-warning my-5 py-4 px-3 rounded-pill text-black fs-1 gw-bolder w-50 mx-auto">Added A New Service Form</h1>
             <form className="w-100 my-5" onSubmit={handleSubmit(onSubmit)}>
-                    <input placeholder="Enter Your Service Title" className="w-75 py-2 mb-2" {...register("title", { required: true, maxLength: 20 })} />
+
+
+
+
+                    <input placeholder="Enter Your Service Title" className="w-75 py-2 mb-2 " {...register("title")} required />
                     <br/>
-                    <input placeholder="Enter Your Service Address" className="w-75 py-2 mb-2" {...register("address")} />
+                    <input placeholder="Enter Your Service Address" className="w-75 py-2 mb-2" {...register("address")} required />
                     <br/>
-                    <input placeholder="Enter Your Service Image URL.." className="w-75 py-2 mb-2" {...register("img")} />
+                    <input placeholder="Enter Your Service Image URL.." className="w-75 py-2 mb-2" {...register("img")}  required/>
                     <br/>
-                    <input placeholder="Enter Your Service Price" className="w-75 py-2 mb-2" type="number" {...register("price")} />
-                    <input placeholder="Enter Your Service Description" className="w-75 py-2 mb-2" {...register("description")} />
+                    <input placeholder="Enter Your Service Price" className="w-75 py-2 mb-2" type="number" {...register("price")} required/>
+                    <textarea placeholder="Enter Your Service Description" className="w-75 py-2 mb-2" {...register("description")} required/>
                     <br/>
                     <br/>
-                    <input type="submit" />
+                    <input className="btn-lg btn-primary px-4 py-2" type="submit" />
             </form>
             </div>
         </div>

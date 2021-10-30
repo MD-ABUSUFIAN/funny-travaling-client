@@ -11,7 +11,7 @@ const Offer = ({offer}) => {
             <div className="col col-md-6 col-lg-4 col-sm-12 col-12">
                 
                 <div className="single-offer border">
-                <img className=" image" src={img} alt=""/>
+                <img className=" image w-100" src={img} alt=""/>
                 
                 <h3>{title}</h3>
                 <h5>{address}</h5>
