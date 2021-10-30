@@ -4,7 +4,7 @@ import Offer from '../Home/Offer/Offer';
 const Offering = () => {
     const [offers,setOffers]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://boiling-hollows-19614.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setOffers(data))
     },[])

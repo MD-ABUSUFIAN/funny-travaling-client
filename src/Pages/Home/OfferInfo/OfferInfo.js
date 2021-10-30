@@ -11,7 +11,7 @@ const OfferInfo = () => {
 
     const[data,setData]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://boiling-hollows-19614.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])

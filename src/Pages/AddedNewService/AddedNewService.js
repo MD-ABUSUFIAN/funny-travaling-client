@@ -7,7 +7,7 @@ const AddedNewService = () => {
     const { register, handleSubmit,reset } = useForm();
   const onSubmit = data =>{
 
-            axios.post('http://localhost:5000/addnew',data)
+            axios.post('https://boiling-hollows-19614.herokuapp.com/addnew',data)
             .then(res=>{
             console.log(res);
         })
