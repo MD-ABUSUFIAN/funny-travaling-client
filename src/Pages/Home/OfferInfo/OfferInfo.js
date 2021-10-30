@@ -1,7 +1,9 @@
 import React from 'react';
+import './OfferInfo.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
+
 
 const OfferInfo = () => {
     const {infoId}=useParams();
@@ -9,7 +11,7 @@ const OfferInfo = () => {
 
     const[data,setData]=useState([])
     useEffect(()=>{
-        fetch('/offering.json')
+        fetch('http://localhost:5000/services')
         .then(res=>res.json())
         .then(data=>setData(data))
     },[])
@@ -26,7 +28,7 @@ const OfferInfo = () => {
             <h5>{result[0]?.description}</h5>
 
 
-        <button className="btn btn-lg py-2 px-4 fs-2 fw-bolder btn-primary mt-5">Order Now</button>
+        <button className=" order-button btn px-4 fs-4 fw-bolder btn-primary mt-5">Order Now</button>
 
             </div>
             

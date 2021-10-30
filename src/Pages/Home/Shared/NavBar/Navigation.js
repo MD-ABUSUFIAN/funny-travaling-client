@@ -8,7 +8,7 @@ const Navigation = () => {
    
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="py-3 text-black">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="py-3 text-black ">
     <Container>
         <Navbar.Brand className="fs-3 fw-bolder me-auto" as={Link} to="/home" >FUNNY TRAVELING</Navbar.Brand>
             <Nav className="ms-auto fs-5 " >
@@ -26,7 +26,7 @@ const Navigation = () => {
            </Nav.Link>
            <Nav.Link className=" nav-text" as={Link} to ="/myordeer">My-Order</Nav.Link>
            <Nav.Link className=" nav-text" as={Link} to ="/manageOrder">Manage All Order</Nav.Link>
-           <Nav.Link className=" nav-text" as={Link} to ="/addnewservice">Add a New Service</Nav.Link>
+           <Nav.Link className=" nav-text" as={Link} to ="/newservice">Add a New Service</Nav.Link>
            
            
            

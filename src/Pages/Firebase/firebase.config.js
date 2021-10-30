@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAp74la7h7bNUWdwAYl20seXSAIctS5lXU",
+    apiKey:"AIzaSyAp74la7h7bNUWdwAYl20seXSAIctS5lXU",
     authDomain: "funny-travaling-agency.firebaseapp.com",
     projectId: "funny-travaling-agency",
     storageBucket: "funny-travaling-agency.appspot.com",

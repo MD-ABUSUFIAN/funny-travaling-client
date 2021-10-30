@@ -4,13 +4,13 @@ import Offer from '../Home/Offer/Offer';
 const Offering = () => {
     const [offers,setOffers]=useState([]);
     useEffect(()=>{
-        fetch('/Offering.json')
+        fetch('http://localhost:5000/services')
         .then(res=>res.json())
         .then(data=>setOffers(data))
     },[])
     return (
         <div>
-            <marquee><h1 className="fs-1 bg-primary p-4 my-4 text-center fw-bolder w-50 text-white rounded-pill"> VACATION OFFER</h1></marquee>
+            <marquee><h1 className="fs-1 bg-primary p-4 my-4 text-center fw-bolder w-50 text-white rounded-pill"> VACATION OFFER 10%</h1></marquee>
             <div className="row gx-4 gy-4 my-5">
                 {
                     offers.map(offer=><Offer key={offer._id} offer={offer}></Offer>)

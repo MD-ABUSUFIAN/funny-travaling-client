@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import VanueRentals from './Pages/Home/VENUE RENTALS/VanueRentals';
 import Footer from './Pages/Home/Shared/Footer/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
+import AddedNewService from './Pages/AddedNewService/AddedNewService';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/login">
          <Login></Login>
+        </Route>
+        <Route path="/newservice">
+         <AddedNewService></AddedNewService>
         </Route>
 
         <Route path="*">

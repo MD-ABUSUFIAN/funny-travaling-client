@@ -13,3 +13,12 @@
     transform: translate(10px, 20px);
     transition: 0.5s ease;
 }
+
+.book-button:hover{
+    background-color:tomato;
+    color: white;
+    font-size: 25px;
+    border: 0px;
+    border-radius:20px;
+    padding:10px 2px;
+}

@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
 
             <hr className="w-75 mx-auto" />
-            <p className="text-center pb-5">Copyright ©2021 All rights reserved | This Website is made with  by abusufian.programmer@gmail.com</p>
+            <p className="text-center pb-3">Copyright ©2021 All rights reserved | This Website is made with  by abusufian.programmer@gmail.com</p>
         </div>
     );
 };

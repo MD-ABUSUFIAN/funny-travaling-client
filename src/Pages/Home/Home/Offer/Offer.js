@@ -16,7 +16,7 @@ const Offer = ({offer}) => {
                 <h3>{title}</h3>
                 <h5>{address}</h5>
                 <h3 className="text-danger">$ {price}</h3>
-                <Link to={`/offerInfo/${_id}`}><button className="btn btn-primary fw-bolder px-4">Book Now</button></Link>
+                <Link to={`/offerInfo/${_id}`}><button className="btn book-button btn-primary fw-bolder px-4">Book Now</button></Link>
                 </div>
                
                 
