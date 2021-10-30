@@ -24,7 +24,7 @@ const Navigation = () => {
            <img className="w-25 img-fluid rounded-circle" src={user.photoURL} alt=""/>
            <button onClick={logOut}>Logout</button>
            </Nav.Link>
-           <Nav.Link className=" nav-text" as={Link} to ="/myordeer">My-Order</Nav.Link>
+           <Nav.Link className=" nav-text" as={Link} to ="/myorder">My-Order</Nav.Link>
            <Nav.Link className=" nav-text" as={Link} to ="/manageOrder">Manage All Order</Nav.Link>
            <Nav.Link className=" nav-text" as={Link} to ="/newservice">Add a New Service</Nav.Link>
            

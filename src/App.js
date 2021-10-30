@@ -14,6 +14,8 @@ import VanueRentals from './Pages/Home/VENUE RENTALS/VanueRentals';
 import Footer from './Pages/Home/Shared/Footer/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import AddedNewService from './Pages/AddedNewService/AddedNewService';
+import ManageOrder from './Pages/ManageOrder/ManageOrder';
+import MyOrder from './Pages/MyOrder/MyOrder';
 
 function App() {
   return (
@@ -43,9 +45,15 @@ function App() {
         <Route path="/login">
          <Login></Login>
         </Route>
-        <Route path="/newservice">
+        <PrivateRoute path="/newservice">
          <AddedNewService></AddedNewService>
-        </Route>
+        </PrivateRoute>
+        <PrivateRoute path="/manageOrder">
+         <ManageOrder></ManageOrder>
+        </PrivateRoute>
+        <PrivateRoute path="/myorder">
+         <MyOrder></MyOrder>
+        </PrivateRoute>
 
         <Route path="*">
           <NotFound></NotFound>
