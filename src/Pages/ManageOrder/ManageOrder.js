@@ -20,7 +20,7 @@ const ManageOrder = () => {
             {
 
                
-                orders.map(order=><div className=" col col-lg-4 col-md-6 col-sm-12 col-12  manageOrder-card text-center mx-auto mb-4 rounded" key={order?._id}>
+                orders.map(order=><div className=" col col-lg-4 col-md-6 col-sm-12 col-12  manageOrder-card text-center mx-auto mb-4 rounded">
                             
                             <img className="img-fluid" src={order.img} alt=""/>
                             <h3>{order?.title}</h3>
