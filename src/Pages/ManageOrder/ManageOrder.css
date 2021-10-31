@@ -1,0 +1,11 @@
+.manageOrder-card{
+    width:300px;
+    height: 320px;
+    box-shadow: 3px 3px 15px 3px rgba(48, 48, 48, 0.534);
+    border: 20px;
+    
+}
+.manageOrder-card img{
+    width:350px;
+    height:150px
+}
