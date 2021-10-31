@@ -29,7 +29,7 @@ const OfferInfo = () => {
         
         order.email=user.email;
         console.log(order);
-        axios.post('http://localhost:5000/myorders',order)
+        axios.post('https://boiling-hollows-19614.herokuapp.com/myorders',order)
         .then(res=>{
         console.log(res);
         })

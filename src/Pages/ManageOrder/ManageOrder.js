@@ -4,7 +4,7 @@ import './ManageOrder.css';
 const ManageOrder = () => {
     const [orders,setOrders]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/manageorders')
+        fetch('https://boiling-hollows-19614.herokuapp.com/manageorders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])
