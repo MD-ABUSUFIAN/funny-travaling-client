@@ -13,7 +13,7 @@ const ManageOrder = () => {
     
 
     const handledelete=id=>{
-        fetch(`http://localhost:5000/manageorders/${id}`,{
+        fetch(`https://boiling-hollows-19614.herokuapp.com/manageorders/${id}`,{
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'},
         }).then(res=>res.json())
@@ -22,7 +22,7 @@ const ManageOrder = () => {
                
                 setIsDelete(true);
                
-                alert("deleted SucussFully")
+                
             }
             else{
               
@@ -48,7 +48,7 @@ const ManageOrder = () => {
                             <h3>{order?.title}</h3>
                             <h5>{order?.address}</h5>
                             <p className="text-danger">$ {order?.price}</p>
-                           <button onClick={()=>handledelete(order._id)} className="btn btn-danger mb-2">X Delete</button>
+                           <button onClick={()=>handledelete(order._id)} className="btn btn-danger mb-2">X Delete-Order</button>
                         </div>
                       
 
