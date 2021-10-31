@@ -3,13 +3,35 @@ import './ManageOrder.css';
 
 const ManageOrder = () => {
     const [orders,setOrders]=useState([]);
+    const[isDelete, setIsDelete]=useState(null);
     useEffect(()=>{
         fetch('https://boiling-hollows-19614.herokuapp.com/manageorders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
-    },[])
+    },[isDelete])
 
     
+
+    const handledelete=id=>{
+        fetch(`http://localhost:5000/manageorders/${id}`,{
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'},
+        }).then(res=>res.json())
+        .then(result=>{
+            if (result.deleteCount) {
+               
+                setIsDelete(true);
+               
+                alert("deleted SucussFully")
+            }
+            else{
+              
+                setIsDelete(false);
+            }
+
+        })
+        console.log(id);
+    }
 
 
     return (
@@ -26,7 +48,7 @@ const ManageOrder = () => {
                             <h3>{order?.title}</h3>
                             <h5>{order?.address}</h5>
                             <p className="text-danger">$ {order?.price}</p>
-                           <button className="btn btn-danger mb-2">X Delete</button>
+                           <button onClick={()=>handledelete(order._id)} className="btn btn-danger mb-2">X Delete</button>
                         </div>
                       
 
